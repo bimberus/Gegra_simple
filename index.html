@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktywny Trening z Geografii</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .quiz-option {
+            transition: all 0.3s ease;
+        }
+        .quiz-option:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen flex items-center justify-center p-4">
+    <div id="app" class="w-full max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+        <!-- Content will be inserted here by JavaScript -->
+    </div>
+
+    <script>
+        // Quiz data
+        const QUESTIONS = [
+            {
+                id: 1,
+                text: 'Spójrz na mapę. Jakie współrzędne geograficzne ma punkt A?',
+                image: 'src/assets/images/maps/world-map-coordinates-1.svg',
+                options: [
+                    { id: '1a', text: '60°N, 100°W', correct: true },
+                    { id: '1b', text: '60°S, 100°W', correct: false },
+                    { id: '1c', text: '100°N, 60°W', correct: false },
+                    { id: '1d', text: '60°N, 100°E', correct: false },
+                ],
+                explanation: 'Szerokość geograficzną (N lub S) odczytujemy z wartości po lewej i prawej stronie mapy. Punkt A jest na linii 60° na północ od równika (0°), więc ma 60°N. Długość geograficzną (W lub E) odczytujemy z góry i dołu mapy. Punkt A jest na linii 100° na zachód od południka 0°, więc ma 100°W.',
+            },
+            {
+                id: 2,
+                text: 'Które z podanych miast na mapie Polski leży najbliżej południka 19°E?',
+                image: 'src/assets/images/maps/poland-map-meridian.svg',
+                options: [
+                    { id: '2a', text: 'Toruń', correct: false },
+                    { id: '2b', text: 'Warszawa', correct: false },
+                    { id: '2c', text: 'Kraków', correct: true },
+                    { id: '2d', text: 'Szczecin', correct: false },
+                ],
+                explanation: 'Południki to te pionowe linie. Kraków leży najbliżej południka 19°E. Warszawa leży na około 21°E, Toruń na 18.5°E, a Szczecin znacznie dalej na zachód.',
+            },
+            {
+                id: 3,
+                text: 'Ile jest kontynentów na Ziemi?',
+                image: 'src/assets/images/maps/continents-overview.svg',
+                options: [
+                    { id: '3a', text: '5', correct: false },
+                    { id: '3b', text: '6', correct: false },
+                    { id: '3c', text: '7', correct: true },
+                    { id: '3d', text: '8', correct: false },
+                ],
+                explanation: 'Na Ziemi jest 7 kontynentów: Afryka, Antarktyda, Azja, Australia, Europa, Ameryka Północna i Ameryka Południowa.',
+            },
+            {
+                id: 4,
+                text: 'Równik to linia, która dzieli Ziemię na dwie półkule:',
+                image: 'src/assets/images/maps/equator-line.svg',
+                options: [
+                    { id: '4a', text: 'wschodnią i zachodnią', correct: false },
+                    { id: '4b', text: 'północną i południową', correct: true },
+                    { id: '4c', text: 'górną i dolną', correct: false },
+                    { id: '4d', text: 'lewą i prawą', correct: false },
+                ],
+                explanation: 'Równik (0° szerokości geograficznej) dzieli Ziemię na półkulę północną i południową.',
+            },
+            {
+                id: 5,
+                text: 'Który kontynent jest największy?',
+                options: [
+                    { id: '5a', text: 'Afryka', correct: false },
+                    { id: '5b', text: 'Azja', correct: true },
+                    { id: '5c', text: 'Ameryka Północna', correct: false },
+                    { id: '5d', text: 'Europa', correct: false },
+                ],
+                explanation: 'Azja jest największym kontynentem na Ziemi, zajmującym około 44,5 miliona km². Znajduje się tam ponad 60% populacji świata.',
+            },
+        ];
+
+        // App state
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let selectedOption = null;
+        let isAnswered = false;
+
+        // Shuffle questions
+        const shuffledQuestions = [...QUESTIONS].sort(() => Math.random() - 0.5);
+
+        // Get app container
+        const app = document.getElementById('app');
+
+        // Render functions
+        function renderQuiz() {
+            const question = shuffledQuestions[currentQuestionIndex];
+            const progress = ((currentQuestionIndex) / shuffledQuestions.length) * 100;
+
+            app.innerHTML = `
+                <div class="p-6 border-b border-gray-200 dark:border-gray-700">
+                    <div class="flex justify-between items-center mb-4">
+                        <h1 class="text-2xl font-bold text-gray-800 dark:text-white">Trening z Geografii</h1>
+                        <span class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-100 dark:bg-gray-700 px-3 py-1 rounded-full">
+                            Pytanie ${currentQuestionIndex + 1} / ${shuffledQuestions.length}
+                        </span>
+                    </div>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                        <div class="bg-indigo-600 h-2.5 rounded-full transition-all duration-500" style="width: ${progress}%"></div>
+                    </div>
+                </div>
+
+                <div class="p-6 md:p-8">
+                    <h2 class="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white mb-4">${question.text}</h2>
+                    
+                    ${question.image ? `
+                        <div class="my-4 rounded-lg overflow-hidden shadow-lg">
+                            <img src="${question.image}" alt="Mapa do pytania" class="w-full h-auto object-contain max-h-96" onerror="this.style.display='none'">
+                        </div>
+                    ` : ''}
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                        ${question.options.map(option => `
+                            <button
+                                onclick="selectAnswer('${option.id}')"
+                                id="option-${option.id}"
+                                class="quiz-option p-4 rounded-lg text-left text-lg font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${getOptionClass(option)}"
+                                ${isAnswered ? 'disabled' : ''}>
+                                ${option.text}
+                            </button>
+                        `).join('')}
+                    </div>
+
+                    ${isAnswered ? `
+                        <div class="mt-8 p-5 bg-blue-50 dark:bg-gray-900 border-l-4 border-blue-500 rounded-r-lg">
+                            <h3 class="text-lg font-bold text-blue-800 dark:text-blue-300 mb-2">Wyjaśnienie</h3>
+                            <p class="text-gray-700 dark:text-gray-300">${question.explanation}</p>
+                        </div>
+                        <div class="text-center mt-8">
+                            <button onclick="nextQuestion()" class="px-10 py-3 bg-indigo-600 text-white font-bold rounded-lg shadow-md hover:bg-indigo-700 transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                ${currentQuestionIndex < shuffledQuestions.length - 1 ? 'Dalej' : 'Zobacz wyniki'}
+                            </button>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+        }
+
+        function renderResults() {
+            const percentage = Math.round((score / shuffledQuestions.length) * 100);
+            let message = '';
+            
+            if (score === shuffledQuestions.length) {
+                message = 'Niesamowite! Jesteś prawdziwą mistrzynią geografii! 🥳';
+            } else if (score > shuffledQuestions.length / 2) {
+                message = 'Świetna robota! Widać, że dużo już umiesz. Jeszcze trochę i będziesz ekspertem! 👍';
+            } else {
+                message = 'Dobry początek! Każdy quiz to krok do przodu. Spróbuj jeszcze raz, a na pewno pójdzie Ci lepiej! 💪';
+            }
+
+            app.innerHTML = `
+                <div class="p-8 md:p-12 text-center flex flex-col items-center">
+                    <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Koniec quizu!</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 mb-6">Twój wynik to:</p>
+                    <div class="w-40 h-40 rounded-full bg-indigo-100 dark:bg-gray-700 flex items-center justify-center mb-8 border-8 border-indigo-500">
+                        <span class="text-5xl font-bold text-indigo-600 dark:text-indigo-300">${score}</span>
+                        <span class="text-2xl text-gray-500 dark:text-gray-400">/5</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-3xl font-bold text-indigo-600">${percentage}%</span>
+                    </div>
+                    <p class="text-lg text-gray-700 dark:text-gray-400 mb-8">${message}</p>
+                    <button onclick="restartQuiz()" class="px-10 py-3 bg-indigo-600 text-white font-bold rounded-lg shadow-md hover:bg-indigo-700 transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Spróbuj ponownie
+                    </button>
+                </div>
+            `;
+        }
+
+        function getOptionClass(option) {
+            if (!isAnswered) {
+                return 'bg-white dark:bg-gray-700 hover:bg-indigo-100 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 cursor-pointer';
+            }
+            if (option.correct) {
+                return 'bg-green-500 text-white transform scale-105';
+            }
+            if (selectedOption === option.id) {
+                return 'bg-red-500 text-white';
+            }
+            return 'bg-white dark:bg-gray-700 opacity-60 text-gray-800 dark:text-gray-200 cursor-not-allowed';
+        }
+
+        function selectAnswer(optionId) {
+            if (isAnswered) return;
+            
+            selectedOption = optionId;
+            isAnswered = true;
+            
+            const question = shuffledQuestions[currentQuestionIndex];
+            const option = question.options.find(o => o.id === optionId);
+            
+            if (option.correct) {
+                score++;
+            }
+            
+            renderQuiz();
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < shuffledQuestions.length - 1) {
+                currentQuestionIndex++;
+                selectedOption = null;
+                isAnswered = false;
+                renderQuiz();
+            } else {
+                renderResults();
+            }
+        }
+
+        function restartQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            selectedOption = null;
+            isAnswered = false;
+            shuffledQuestions.sort(() => Math.random() - 0.5);
+            renderQuiz();
+        }
+
+        // Initialize app
+        renderQuiz();
+    </script>
+</body>
+</html>
