@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="800" height="600" fill="#DCFCE7"/>
+<svg width="600" height="700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background (Baltic Sea and surroundings) -->
+  <rect width="600" height="700" fill="#d4e8f0"/>
   
-  <!-- Border -->
-  <rect x="10" y="10" width="780" height="580" 
-        fill="none" stroke="#15803D" stroke-width="8"/>
-  
-  <!-- Grid lines (meridians and parallels) -->
-  <g opacity="0.3" stroke="#166534" stroke-width="2">
-    <line x1="100" y1="30" x2="100" y2="570"/>
-    <line x1="200" y1="30" x2="200" y2="570"/>
-    <line x1="300" y1="30" x2="300" y2="570"/>
-    <line x1="400" y1="30" x2="400" y2="570"/>
-    <line x1="500" y1="30" x2="500" y2="570"/>
-    <line x1="600" y1="30" x2="600" y2="570"/>
-    <line x1="700" y1="30" x2="700" y2="570"/>
-    <line x1="30" y1="100" x2="770" y2="100"/>
-    <line x1="30" y1="200" x2="770" y2="200"/>
-    <line x1="30" y1="300" x2="770" y2="300"/>
-    <line x1="30" y1="400" x2="770" y2="400"/>
-    <line x1="30" y1="500" x2="770" y2="500"/>
+  <!-- Grid lines for meridians -->
+  <g stroke="#999" stroke-width="1" opacity="0.4">
+    <line x1="150" y1="50" x2="150" y2="650"/>
+    <line x1="250" y1="50" x2="250" y2="650"/>
+    <line x1="350" y1="50" x2="350" y2="650" stroke="#d00" stroke-width="2.5" opacity="0.8"/>
+    <line x1="450" y1="50" x2="450" y2="650"/>
   </g>
   
-  <!-- Central shape -->
-  <ellipse cx="400" cy="300" rx="200" ry="120" 
-           fill="#15803D" opacity="0.2"/>
+  <!-- Poland outline (simplified but recognizable) -->
+  <path d="M 200,180 
+           L 250,160 L 300,150 L 350,155 L 400,165 L 440,180 
+           L 460,200 L 470,230 L 475,270 L 470,320 
+           L 460,370 L 440,420 L 410,460 L 370,490 
+           L 320,510 L 280,520 L 240,515 L 200,500 
+           L 170,470 L 150,430 L 140,380 L 145,330 
+           L 155,280 L 170,230 Z" 
+        fill="#c8e6c9" stroke="#2d5016" stroke-width="2.5"/>
+  
+  <!-- Baltic Sea -->
+  <ellipse cx="300" cy="130" rx="120" ry="40" fill="#7cb3d9"/>
+  
+  <!-- Cities -->
+  <!-- Kraków (19°E) -->
+  <circle cx="350" cy="470" r="6" fill="#e74c3c" stroke="#000" stroke-width="1.5"/>
+  <text x="350" y="495" font-family="Arial, sans-serif" font-size="18" font-weight="bold" 
+        fill="#c0392b" text-anchor="middle">Kraków</text>
+  
+  <!-- Warszawa (21°E) -->
+  <circle cx="405" cy="360" r="5" fill="#3498db" stroke="#000" stroke-width="1"/>
+  <text x="405" y="345" font-family="Arial, sans-serif" font-size="16" 
+        fill="#2874a6" text-anchor="middle">Warszawa</text>
+  
+  <!-- Toruń (18.5°E) -->
+  <circle cx="330" cy="300" r="4" fill="#3498db" stroke="#000" stroke-width="1"/>
+  <text x="330" y="285" font-family="Arial, sans-serif" font-size="16" 
+        fill="#2874a6" text-anchor="middle">Toruń</text>
+  
+  <!-- Szczecin (14°E) -->
+  <circle cx="200" cy="240" r="4" fill="#3498db" stroke="#000" stroke-width="1"/>
+  <text x="200" y="225" font-family="Arial, sans-serif" font-size="16" 
+        fill="#2874a6" text-anchor="middle">Szczecin</text>
+  
+  <!-- Meridian labels -->
+  <g font-family="Arial, sans-serif" font-size="14" fill="#555">
+    <text x="150" y="670" text-anchor="middle">15°E</text>
+    <text x="250" y="670" text-anchor="middle">17°E</text>
+    <text x="350" y="670" text-anchor="middle" fill="#d00" font-weight="bold">19°E</text>
+    <text x="450" y="670" text-anchor="middle">21°E</text>
+  </g>
   
   <!-- Title -->
-  <text x="400" y="70" font-family="Arial, sans-serif" font-size="48" 
-        font-weight="bold" fill="#15803D" text-anchor="middle">
-    Mapa Polski
-  </text>
+  <text x="300" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" 
+        fill="#333" text-anchor="middle">Polska - Południk 19°E</text>
   
-  <!-- Subtitle lines -->
-  <text x="400" y="430" font-family="Arial, sans-serif" 
-           font-size="32" fill="#166534" text-anchor="middle">Południk 19°E</text>
-  <text x="400" y="470" font-family="Arial, sans-serif" 
-           font-size="32" fill="#166534" text-anchor="middle">Miasta: Kraków, Warszawa,</text>
-  <text x="400" y="510" font-family="Arial, sans-serif" 
-           font-size="32" fill="#166534" text-anchor="middle">Toruń, Szczecin</text>
+  <!-- Legend -->
+  <circle cx="520" cy="580" r="6" fill="#e74c3c" stroke="#000" stroke-width="1.5"/>
+  <text x="535" y="585" font-family="Arial, sans-serif" font-size="14" fill="#333">= 19°E</text>
   
-  <!-- Compass rose -->
-  <g transform="translate(680, 120)">
-    <!-- Circle -->
-    <circle cx="0" cy="0" r="60" fill="none" stroke="#15803D" stroke-width="3"/>
-    
-    <!-- North arrow -->
-    <polygon points="0,-50 -15,-20 15,-20" fill="#15803D"/>
-    
-    <!-- Direction letters -->
-    <text x="0" y="-75" font-family="Arial, sans-serif" font-size="24" 
-          font-weight="bold" fill="#15803D" text-anchor="middle">N</text>
-    <text x="0" y="85" font-family="Arial, sans-serif" font-size="18" 
-          fill="#166534" text-anchor="middle">S</text>
-    <text x="80" y="5" font-family="Arial, sans-serif" font-size="18" 
-          fill="#166534" text-anchor="middle">E</text>
-    <text x="-80" y="5" font-family="Arial, sans-serif" font-size="18" 
-          fill="#166534" text-anchor="middle">W</text>
-    
-    <!-- Cross lines -->
-    <line x1="0" y1="-50" x2="0" y2="50" stroke="#166534" stroke-width="2"/>
-    <line x1="-50" y1="0" x2="50" y2="0" stroke="#166534" stroke-width="2"/>
-  </g>
+  <circle cx="520" cy="610" r="5" fill="#3498db" stroke="#000" stroke-width="1"/>
+  <text x="535" y="615" font-family="Arial, sans-serif" font-size="14" fill="#333">= inne</text>
 </svg>

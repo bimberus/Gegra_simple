@@ -1,66 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="800" height="600" fill="#FDF4FF"/>
+<svg width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ocean -->
+  <rect width="900" height="500" fill="#a8d5e2"/>
   
-  <!-- Border -->
-  <rect x="10" y="10" width="780" height="580" 
-        fill="none" stroke="#A855F7" stroke-width="8"/>
+  <!-- Continents with labels -->
   
-  <!-- Grid lines (meridians and parallels) -->
-  <g opacity="0.3" stroke="#9333EA" stroke-width="2">
-    <line x1="100" y1="30" x2="100" y2="570"/>
-    <line x1="200" y1="30" x2="200" y2="570"/>
-    <line x1="300" y1="30" x2="300" y2="570"/>
-    <line x1="400" y1="30" x2="400" y2="570"/>
-    <line x1="500" y1="30" x2="500" y2="570"/>
-    <line x1="600" y1="30" x2="600" y2="570"/>
-    <line x1="700" y1="30" x2="700" y2="570"/>
-    <line x1="30" y1="100" x2="770" y2="100"/>
-    <line x1="30" y1="200" x2="770" y2="200"/>
-    <line x1="30" y1="300" x2="770" y2="300"/>
-    <line x1="30" y1="400" x2="770" y2="400"/>
-    <line x1="30" y1="500" x2="770" y2="500"/>
-  </g>
+  <!-- 1. North America -->
+  <path d="M 120,100 L 160,90 L 210,95 L 240,120 L 260,150 L 250,190 L 220,210 L 190,220 L 160,230 L 140,210 L 120,170 Z" 
+        fill="#7fc97f" stroke="#2d5016" stroke-width="2"/>
+  <text x="185" y="160" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1a3a1a" text-anchor="middle">Ameryka</text>
+  <text x="185" y="178" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1a3a1a" text-anchor="middle">Północna</text>
   
-  <!-- Central shape -->
-  <ellipse cx="400" cy="300" rx="200" ry="120" 
-           fill="#A855F7" opacity="0.2"/>
+  <!-- 2. South America -->
+  <path d="M 200,260 L 230,250 L 250,260 L 265,290 L 275,330 L 265,365 L 245,385 L 220,380 L 210,350 L 205,310 L 195,280 Z" 
+        fill="#7fc97f" stroke="#2d5016" stroke-width="2"/>
+  <text x="235" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1a3a1a" text-anchor="middle">Ameryka</text>
+  <text x="235" y="338" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1a3a1a" text-anchor="middle">Południowa</text>
+  
+  <!-- 3. Europe -->
+  <path d="M 420,100 L 460,95 L 490,105 L 500,125 L 495,145 L 470,150 L 440,145 L 425,130 Z" 
+        fill="#beaed4" stroke="#4a3a5a" stroke-width="2"/>
+  <text x="460" y="125" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2a1a3a" text-anchor="middle">Europa</text>
+  
+  <!-- 4. Africa -->
+  <path d="M 440,170 L 480,165 L 520,180 L 535,210 L 540,250 L 535,290 L 520,325 L 490,340 L 465,335 L 445,310 L 435,270 L 430,220 L 425,190 Z" 
+        fill="#fdb462" stroke="#8a4a00" stroke-width="2"/>
+  <text x="480" y="255" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#4a2a00" text-anchor="middle">Afryka</text>
+  
+  <!-- 5. Asia -->
+  <path d="M 510,80 L 590,75 L 670,85 L 730,105 L 760,130 L 755,165 L 730,190 L 680,200 L 620,195 L 560,185 L 520,165 L 500,135 L 495,105 Z" 
+        fill="#fb8072" stroke="#8a2a2a" stroke-width="2"/>
+  <text x="625" y="145" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#4a0a0a" text-anchor="middle">Azja</text>
+  
+  <!-- 6. Australia -->
+  <path d="M 680,300 L 720,295 L 755,305 L 770,330 L 765,355 L 735,365 L 705,360 L 680,340 Z" 
+        fill="#80b1d3" stroke="#2a4a5a" stroke-width="2"/>
+  <text x="725" y="335" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0a2a3a" text-anchor="middle">Australia</text>
+  
+  <!-- 7. Antarctica -->
+  <path d="M 200,440 L 300,435 L 400,435 L 500,435 L 600,435 L 700,440 L 750,450 L 700,465 L 600,470 L 500,470 L 400,470 L 300,465 L 200,455 Z" 
+        fill="#f0f0f0" stroke="#666" stroke-width="2"/>
+  <text x="450" y="458" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">Antarktyda</text>
   
   <!-- Title -->
-  <text x="400" y="70" font-family="Arial, sans-serif" font-size="48" 
-        font-weight="bold" fill="#A855F7" text-anchor="middle">
-    7 Kontynentów
-  </text>
+  <text x="450" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#333" text-anchor="middle">7 Kontynentów Świata</text>
   
-  <!-- Subtitle lines -->
-  <text x="400" y="430" font-family="Arial, sans-serif" 
-           font-size="32" fill="#9333EA" text-anchor="middle">Afryka, Antarktyda, Azja,</text>
-  <text x="400" y="470" font-family="Arial, sans-serif" 
-           font-size="32" fill="#9333EA" text-anchor="middle">Australia, Europa,</text>
-  <text x="400" y="510" font-family="Arial, sans-serif" 
-           font-size="32" fill="#9333EA" text-anchor="middle">Ameryka Płn., Ameryka Płd.</text>
+  <!-- Number labels -->
+  <circle cx="185" cy="120" r="18" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="185" y="127" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">1</text>
   
-  <!-- Compass rose -->
-  <g transform="translate(680, 120)">
-    <!-- Circle -->
-    <circle cx="0" cy="0" r="60" fill="none" stroke="#A855F7" stroke-width="3"/>
-    
-    <!-- North arrow -->
-    <polygon points="0,-50 -15,-20 15,-20" fill="#A855F7"/>
-    
-    <!-- Direction letters -->
-    <text x="0" y="-75" font-family="Arial, sans-serif" font-size="24" 
-          font-weight="bold" fill="#A855F7" text-anchor="middle">N</text>
-    <text x="0" y="85" font-family="Arial, sans-serif" font-size="18" 
-          fill="#9333EA" text-anchor="middle">S</text>
-    <text x="80" y="5" font-family="Arial, sans-serif" font-size="18" 
-          fill="#9333EA" text-anchor="middle">E</text>
-    <text x="-80" y="5" font-family="Arial, sans-serif" font-size="18" 
-          fill="#9333EA" text-anchor="middle">W</text>
-    
-    <!-- Cross lines -->
-    <line x1="0" y1="-50" x2="0" y2="50" stroke="#9333EA" stroke-width="2"/>
-    <line x1="-50" y1="0" x2="50" y2="0" stroke="#9333EA" stroke-width="2"/>
-  </g>
+  <circle cx="235" cy="280" r="18" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="235" y="287" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">2</text>
+  
+  <circle cx="460" cy="95" r="18" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="460" y="102" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">3</text>
+  
+  <circle cx="480" cy="215" r="18" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="480" y="222" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">4</text>
+  
+  <circle cx="625" cy="110" r="18" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="625" y="117" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">5</text>
+  
+  <circle cx="725" cy="305" r="18" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="725" y="312" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">6</text>
+  
+  <circle cx="450" cy="430" r="18" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="450" y="437" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">7</text>
 </svg>
