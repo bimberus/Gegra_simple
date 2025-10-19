@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="400" fill="#e8f4f8"/>
+  
+  <!-- Time zones (24 strips) -->
+  <g opacity="0.7">
+    <rect x="40" y="80" width="38" height="240" fill="#ff6b6b"/>
+    <rect x="78" y="80" width="38" height="240" fill="#ffa07a"/>
+    <rect x="116" y="80" width="38" height="240" fill="#ffd700"/>
+    <rect x="154" y="80" width="38" height="240" fill="#98fb98"/>
+    <rect x="192" y="80" width="38" height="240" fill="#87ceeb"/>
+    <rect x="230" y="80" width="38" height="240" fill="#dda0dd"/>
+    <rect x="268" y="80" width="38" height="240" fill="#ffb6c1"/>
+    <rect x="306" y="80" width="38" height="240" fill="#ffa500"/>
+    <rect x="344" y="80" width="38" height="240" fill="#90ee90"/>
+    <rect x="382" y="80" width="38" height="240" fill="#add8e6"/>
+    <rect x="420" y="80" width="38" height="240" fill="#dda0dd"/>
+    <rect x="458" y="80" width="38" height="240" fill="#ffb6c1"/>
+    <rect x="496" y="80" width="38" height="240" fill="#ff6b6b" stroke="#000" stroke-width="3"/>
+    <rect x="534" y="80" width="38" height="240" fill="#ffa07a"/>
+    <rect x="572" y="80" width="38" height="240" fill="#ffd700"/>
+    <rect x="610" y="80" width="38" height="240" fill="#98fb98"/>
+    <rect x="648" y="80" width="38" height="240" fill="#87ceeb"/>
+    <rect x="686" y="80" width="38" height="240" fill="#dda0dd"/>
+    <rect x="724" y="80" width="38" height="240" fill="#ffb6c1"/>
+    <rect x="762" y="80" width="38" height="240" fill="#ffa500"/>
+    <rect x="800" y="80" width="38" height="240" fill="#90ee90"/>
+    <rect x="838" y="80" width="38" height="240" fill="#add8e6"/>
+    <rect x="876" y="80" width="38" height="240" fill="#dda0dd"/>
+    <rect x="914" y="80" width="38" height="240" fill="#ffb6c1"/>
+  </g>
+  
+  <!-- Meridians -->
+  <g stroke="#333" stroke-width="1.5" opacity="0.6">
+    <line x1="496" y1="60" x2="496" y2="340"/>
+  </g>
+  
+  <!-- Labels -->
+  <text x="496" y="50" font-family="Arial" font-size="16" font-weight="bold" fill="#d00" text-anchor="middle">0° (Londyn)</text>
+  
+  <text x="230" y="355" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">-6h</text>
+  <text x="344" y="355" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">-3h</text>
+  <text x="496" y="355" font-family="Arial" font-size="16" font-weight="bold" fill="#d00" text-anchor="middle">0h GMT</text>
+  <text x="610" y="355" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">+3h</text>
+  <text x="762" y="355" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">+7h</text>
+  
+  <!-- Cities WITHOUT TIMES - just markers -->
+  <circle cx="192" cy="180" r="5" fill="#000"/>
+  <text x="192" y="170" font-family="Arial" font-size="13" fill="#000" text-anchor="middle">Nowy Jork</text>
+  
+  <circle cx="496" cy="180" r="5" fill="#000"/>
+  <text x="496" y="170" font-family="Arial" font-size="13" fill="#000" text-anchor="middle">Londyn</text>
+  <text x="496" y="200" font-family="Arial" font-size="12" fill="#d00" text-anchor="middle">17:00</text>
+  
+  <circle cx="648" cy="180" r="5" fill="#000"/>
+  <text x="648" y="170" font-family="Arial" font-size="13" fill="#000" text-anchor="middle">Warszawa</text>
+  
+  <circle cx="838" cy="180" r="5" fill="#000"/>
+  <text x="838" y="170" font-family="Arial" font-size="13" fill="#000" text-anchor="middle">Tokio</text>
+  
+  <text x="500" y="30" font-family="Arial" font-size="24" font-weight="bold" fill="#333" text-anchor="middle">Strefy czasowe - oblicz czas lokalny</text>
+</svg>

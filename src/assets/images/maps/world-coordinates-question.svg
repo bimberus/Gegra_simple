@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#a8d5e2"/>
+  
+  <!-- Grid lines -->
+  <g stroke="#999" stroke-width="1" opacity="0.5">
+    <line x1="100" y1="50" x2="100" y2="450"/>
+    <line x1="200" y1="50" x2="200" y2="450"/>
+    <line x1="300" y1="50" x2="300" y2="450"/>
+    <line x1="400" y1="50" x2="400" y2="450" stroke="#333" stroke-width="2"/>
+    <line x1="500" y1="50" x2="500" y2="450"/>
+    <line x1="600" y1="50" x2="600" y2="450"/>
+    <line x1="700" y1="50" x2="700" y2="450"/>
+    <line x1="50" y1="100" x2="750" y2="100"/>
+    <line x1="50" y1="150" x2="750" y2="150"/>
+    <line x1="50" y1="250" x2="750" y2="250" stroke-width="2" stroke="#333"/>
+    <line x1="50" y1="350" x2="750" y2="350"/>
+    <line x1="50" y1="400" x2="750" y2="400"/>
+  </g>
+  
+  <!-- Continents (simplified) -->
+  <path d="M 150,120 L 180,110 L 220,115 L 240,140 L 260,160 L 250,200 L 220,220 L 200,240 L 170,250 L 150,230 L 140,180 Z" 
+        fill="#90c090" stroke="#333" stroke-width="1"/>
+  <path d="M 220,280 L 240,270 L 260,280 L 270,310 L 280,340 L 270,370 L 250,390 L 230,385 L 220,360 L 215,330 Z" 
+        fill="#90c090" stroke="#333" stroke-width="1"/>
+  <path d="M 380,140 L 410,135 L 440,145 L 450,160 L 445,175 L 420,180 L 395,175 L 385,160 Z" 
+        fill="#90c090" stroke="#333" stroke-width="1"/>
+  <path d="M 420,200 L 450,195 L 480,210 L 490,240 L 495,270 L 490,310 L 475,340 L 450,350 L 430,340 L 420,310 L 415,270 L 410,230 Z" 
+        fill="#90c090" stroke="#333" stroke-width="1"/>
+  <path d="M 460,110 L 520,105 L 580,115 L 620,130 L 640,155 L 635,180 L 615,200 L 580,210 L 540,205 L 500,195 L 470,180 L 455,150 Z" 
+        fill="#90c090" stroke="#333" stroke-width="1"/>
+  <path d="M 600,320 L 630,315 L 660,325 L 670,350 L 665,370 L 640,380 L 615,375 L 595,355 Z" 
+        fill="#90c090" stroke="#333" stroke-width="1"/>
+  
+  <!-- Labels for coordinates -->
+  <g font-family="Arial" font-size="14" fill="#333">
+    <text x="25" y="105" text-anchor="end">60°N</text>
+    <text x="25" y="155" text-anchor="end">40°N</text>
+    <text x="25" y="255" text-anchor="end">0°</text>
+    <text x="25" y="355" text-anchor="end">40°S</text>
+    <text x="25" y="405" text-anchor="end">60°S</text>
+    
+    <text x="100" y="470" text-anchor="middle">120°W</text>
+    <text x="200" y="470" text-anchor="middle">80°W</text>
+    <text x="300" y="470" text-anchor="middle">40°W</text>
+    <text x="400" y="470" text-anchor="middle">0°</text>
+    <text x="500" y="470" text-anchor="middle">40°E</text>
+    <text x="600" y="470" text-anchor="middle">80°E</text>
+    <text x="700" y="470" text-anchor="middle">120°E</text>
+  </g>
+  
+  <!-- Points WITHOUT COORDINATES -->
+  <circle cx="133" cy="100" r="8" fill="red" stroke="#000" stroke-width="2"/>
+  <text x="133" y="85" font-family="Arial" font-size="20" font-weight="bold" fill="red" text-anchor="middle">A</text>
+  
+  <circle cx="433" cy="350" r="8" fill="blue" stroke="#000" stroke-width="2"/>
+  <text x="433" y="335" font-family="Arial" font-size="20" font-weight="bold" fill="blue" text-anchor="middle">B</text>
+  
+  <text x="400" y="30" font-family="Arial" font-size="22" font-weight="bold" fill="#333" text-anchor="middle">Odczytaj współrzędne punktów</text>
+</svg>

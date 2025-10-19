@@ -30,32 +30,39 @@
             // PYTANIA Z ILUSTRACJAMI (20 pytań)
             {
                 id: 1,
-                text: 'Spójrz na mapę. Jakie współrzędne geograficzne ma punkt X?',
-                image: 'src/assets/images/maps/coordinate-grid.svg',
+                text: 'Spójrz na mapę. Jakie współrzędne geograficzne ma zaznaczony punkt?',
+                image: 'src/assets/images/maps/coordinate-grid-question.svg',
+                explanationImage: 'src/assets/images/maps/coordinate-grid.svg',
                 options: [
                     { id: '1a', text: '30°N, 30°E', correct: true },
                     { id: '1b', text: '30°E, 30°N', correct: false },
                     { id: '1c', text: '30°S, 30°W', correct: false },
                     { id: '1d', text: '60°N, 30°E', correct: false },
                 ],
-                explanation: 'Współrzędne zapisujemy zawsze w kolejności: szerokość (N/S), długość (E/W). Punkt X leży na przecięciu 30°N i 30°E.',
+                explanation: 'Współrzędne zapisujemy zawsze w kolejności: szerokość (N/S), długość (E/W). Punkt leży na przecięciu 30°N i 30°E.',
             },
             {
                 id: 2,
-                text: 'Które z podanych miast leży najbliżej południka 19°E?',
-                image: 'src/assets/images/maps/poland-map-meridian.svg',
+                text: 'Które miasto (A, B, C lub D) leży najbliżej południka 19°E?',
+                image: 'src/assets/images/maps/poland-map-question.svg',
+                explanationImage: 'src/assets/images/maps/poland-map-meridian.svg',
                 options: [
-                    { id: '2a', text: 'Toruń', correct: false },
-                    { id: '2b', text: 'Warszawa', correct: false },
-                    { id: '2c', text: 'Kraków', correct: true },
+                    { id: '2a', text: 'Miasto C (Toruń)', correct: false },
+                    { id: '2b', text: 'Miasto B (Warszawa)', correct: false },
+                    { id: '2c', text: 'Miasto A (Kraków)', correct: true },
+                    { id: '2d', text: 'Miasto D (Szczecin)', correct: false },
+                ],
+                explanation: 'Miasto A to Kraków, który leży najbliżej południka 19°E. Warszawa (B) leży na około 21°E, Toruń (C) na 18.5°E, a Szczecin (D) znacznie dalej na zachód.',
+            },
                     { id: '2d', text: 'Szczecin', correct: false },
                 ],
                 explanation: 'Kraków leży najbliżej południka 19°E (wyróżniony na czerwono). Warszawa leży na około 21°E, Toruń na 18.5°E, a Szczecin znacznie dalej na zachód.',
             },
             {
                 id: 3,
-                text: 'Gdy w Londynie (0°) jest godzina 17:00, która godzina jest w Warszawie?',
-                image: 'src/assets/images/maps/time-zones-world.svg',
+                text: 'Gdy w Londynie (oznaczonym jako 0°) jest godzina 17:00, która godzina jest w Warszawie?',
+                image: 'src/assets/images/maps/time-zones-question.svg',
+                explanationImage: 'src/assets/images/maps/time-zones-world.svg',
                 options: [
                     { id: '3a', text: '16:00', correct: false },
                     { id: '3b', text: '17:00', correct: false },
@@ -74,7 +81,7 @@
                     { id: '4c', text: 'Ziemia krąży wokół Słońca', correct: false },
                     { id: '4d', text: 'Księżyc zasłania Słońce', correct: false },
                 ],
-                explanation: 'Dzień i noc powstają w wyniku ruchu obrotowego Ziemi wokół własnej osi. Jeden pełny obrót trwa 24 godziny.',
+                explanation: 'Dzień i noc powstają w wyniku ruchu obrotowego Ziemi wokół własnej osi. Jeden pełny obrót trwa 24 godziny. Strona zwrócona ku Słońcu ma dzień, a odwrotna - noc.',
             },
             {
                 id: 5,
@@ -98,7 +105,7 @@
                     { id: '6c', text: '66,5°N', correct: false },
                     { id: '6d', text: '90°N', correct: false },
                 ],
-                explanation: 'Zwrotnik Raka znajduje się na szerokości geograficznej 23,5°N. To najdalszy punkt na północ, gdzie Słońce może znajdować się dokładnie nad głową (w dniu przesilenia letniego).',
+                explanation: 'Zwrotnik Raka znajduje się na szerokości geograficznej 23,5°N. To najdalszy punkt na północ, gdzie Słońce może znajdować się dokładnie nad głową (w dniu przesilenia letniego - 21 czerwca).',
             },
             {
                 id: 7,
@@ -110,7 +117,7 @@
                     { id: '7c', text: 'Nic się nie stanie', correct: false },
                     { id: '7d', text: 'Zmieni się tylko godzina', correct: false },
                 ],
-                explanation: 'Międzynarodowa linia zmiany daty przebiega wzdłuż 180° południka. Przekraczając ją ze wschodu na zachód, cofasz się o jeden dzień w kalendarzu.',
+                explanation: 'Międzynarodowa linia zmiany daty przebiega wzdłuż 180° południka. Przekraczając ją ze wschodu na zachód (np. z Azji do Ameryki), cofasz się o jeden dzień w kalendarzu.',
             },
             {
                 id: 8,
@@ -122,12 +129,13 @@
                     { id: '8c', text: 'Ze wschodu na zachód', correct: false },
                     { id: '8d', text: 'Z południa na północ', correct: false },
                 ],
-                explanation: 'Ziemia obraca się z zachodu na wschód (przeciwnie do ruchu wskazówek zegara patrząc od góry). Dlatego Słońce "wschodzi" na wschodzie.',
+                explanation: 'Ziemia obraca się z zachodu na wschód (przeciwnie do ruchu wskazówek zegara patrząc od strony bieguna północnego). Dlatego Słońce "wschodzi" na wschodzie, a "zachodzi" na zachodzie.',
             },
             {
                 id: 9,
                 text: 'Spójrz na mapę świata. Jakie współrzędne ma punkt A?',
-                image: 'src/assets/images/maps/world-map-coordinates-1.svg',
+                image: 'src/assets/images/maps/world-coordinates-question.svg',
+                explanationImage: 'src/assets/images/maps/world-map-coordinates-1.svg',
                 options: [
                     { id: '9a', text: '60°N, 100°W', correct: true },
                     { id: '9b', text: '60°S, 100°W', correct: false },
@@ -146,19 +154,20 @@
                     { id: '10c', text: '7', correct: true },
                     { id: '10d', text: '8', correct: false },
                 ],
-                explanation: 'Na Ziemi jest 7 kontynentów: Ameryka Północna, Ameryka Południowa, Europa, Afryka, Azja, Australia i Antarktyda.',
+                explanation: 'Na Ziemi jest 7 kontynentów: Ameryka Północna (1), Ameryka Południowa (2), Europa (3), Afryka (4), Azja (5), Australia (6) i Antarktyda (7).',
             },
             {
                 id: 11,
-                text: 'Gdy w Nowym Jorku jest 12:00, która godzina jest w Londynie?',
-                image: 'src/assets/images/maps/time-zones-world.svg',
+                text: 'Gdy w Nowym Jorku jest 12:00, która godzina jest w Londynie (patrz na mapę)?',
+                image: 'src/assets/images/maps/time-zones-question.svg',
+                explanationImage: 'src/assets/images/maps/time-zones-world.svg',
                 options: [
                     { id: '11a', text: '11:00', correct: false },
                     { id: '11b', text: '13:00', correct: false },
                     { id: '11c', text: '17:00', correct: true },
                     { id: '11d', text: '7:00', correct: false },
                 ],
-                explanation: 'Nowy Jork jest w strefie GMT-5, a Londyn w GMT+0. Różnica wynosi 5 godzin. Gdy w Nowym Jorku jest 12:00, w Londynie jest 17:00.',
+                explanation: 'Nowy Jork jest w strefie GMT-5, a Londyn w GMT+0. Różnica wynosi 5 godzin. Gdy w Nowym Jorku jest 12:00 (południe), w Londynie jest 17:00 (popołudnie).',
             },
             {
                 id: 12,
@@ -170,7 +179,7 @@
                     { id: '12c', text: 'Koło podbiegunowe północne', correct: true },
                     { id: '12d', text: 'Zwrotnik Koziorożca', correct: false },
                 ],
-                explanation: 'Koło podbiegunowe północne (66,5°N) znajduje się najdalej na północ spośród wymienionych linii. Jest to granica obszaru polarnego.',
+                explanation: 'Koło podbiegunowe północne (66,5°N) znajduje się najdalej na północ spośród wymienionych linii. Jest to granica obszaru polarnego, gdzie występuje dzień i noc polarna.',
             },
             {
                 id: 13,
@@ -182,11 +191,11 @@
                     { id: '13c', text: '48 godzin', correct: false },
                     { id: '13d', text: '365 dni', correct: false },
                 ],
-                explanation: 'Jeden pełny obrót Ziemi wokół własnej osi trwa około 24 godzin (dokładnie 23 godziny 56 minut). To właśnie definiuje długość doby.',
+                explanation: 'Jeden pełny obrót Ziemi wokół własnej osi trwa około 24 godzin (dokładnie 23 godziny 56 minut i 4 sekundy). To właśnie definiuje długość doby.',
             },
             {
                 id: 14,
-                text: 'Spójrz na koło podbiegunowe. Ile wynosi jego szerokość geograficzna?',
+                text: 'Ile wynosi szerokość geograficzna koła podbiegunowego północnego?',
                 image: 'src/assets/images/maps/arctic-circle.svg',
                 options: [
                     { id: '14a', text: '23,5°N', correct: false },
@@ -194,7 +203,7 @@
                     { id: '14c', text: '66,5°N', correct: true },
                     { id: '14d', text: '90°N', correct: false },
                 ],
-                explanation: 'Koło podbiegunowe północne znajduje się na szerokości geograficznej 66,5°N. Obszar powyżej tej linii nazywamy obszarem polarnym lub podbiegunowym.',
+                explanation: 'Koło podbiegunowe północne znajduje się na szerokości geograficznej 66,5°N. Obszar powyżej tej linii nazywamy obszarem polarnym, gdzie latem słońce nie zachodzi, a zimą nie wschodzi.',
             },
             {
                 id: 15,
@@ -206,19 +215,20 @@
                     { id: '15c', text: 'Australia', correct: false },
                     { id: '15d', text: 'Antarktyda', correct: true },
                 ],
-                explanation: 'Antarktyda to kontynent położony wokół bieguna południowego, najdalej na południe. Jest całkowicie pokryta lodem.',
+                explanation: 'Antarktyda (kontynent nr 7) to kontynent położony wokół bieguna południowego, najdalej na południe. Jest całkowicie pokryta lodem i jest najmniej zaludnionym kontynentem.',
             },
             {
                 id: 16,
                 text: 'Patrząc na mapę stref czasowych, ile wynosi różnica czasu między Tokio a Warszawą?',
-                image: 'src/assets/images/maps/time-zones-world.svg',
+                image: 'src/assets/images/maps/time-zones-question.svg',
+                explanationImage: 'src/assets/images/maps/time-zones-world.svg',
                 options: [
                     { id: '16a', text: '5 godzin', correct: false },
                     { id: '16b', text: '7 godzin', correct: true },
                     { id: '16c', text: '9 godzin', correct: false },
                     { id: '16d', text: '12 godzin', correct: false },
                 ],
-                explanation: 'Tokio jest w strefie GMT+9, Warszawa w GMT+1 (zimą) lub GMT+2 (latem). Standardowa różnica wynosi około 7-8 godzin.',
+                explanation: 'Tokio jest w strefie GMT+9, Warszawa w GMT+1 (zimą) lub GMT+2 (latem). Standardowa różnica wynosi 9-1=8 godzin zimą lub 9-2=7 godzin latem.',
             },
             {
                 id: 17,
@@ -230,31 +240,33 @@
                     { id: '17c', text: 'Przez Berlin', correct: false },
                     { id: '17d', text: 'Przez Moskwę', correct: false },
                 ],
-                explanation: 'Południk zerowy (0°) przechodzi przez dzielnicę Greenwich w Londynie. Stamtąd bierze swoją nazwę i jest punktem odniesienia dla wszystkich stref czasowych.',
+                explanation: 'Południk zerowy (0°) przechodzi przez dzielnicę Greenwich w Londynie. Stamtąd bierze swoją nazwę i jest punktem odniesienia dla wszystkich stref czasowych (GMT - Greenwich Mean Time).',
             },
             {
                 id: 18,
-                text: 'Co przedstawia siatka na mapie?',
-                image: 'src/assets/images/maps/coordinate-grid.svg',
+                text: 'Co przedstawia siatka na mapie geograficznej?',
+                image: 'src/assets/images/maps/coordinate-grid-question.svg',
+                explanationImage: 'src/assets/images/maps/coordinate-grid.svg',
                 options: [
                     { id: '18a', text: 'Granice państw', correct: false },
                     { id: '18b', text: 'Równoleżniki i południki', correct: true },
                     { id: '18c', text: 'Rzeki i góry', correct: false },
                     { id: '18d', text: 'Drogi i miasta', correct: false },
                 ],
-                explanation: 'Siatka geograficzna składa się z równoleżników (linie poziome pokazujące szerokość geograficzną) i południków (linie pionowe pokazujące długość geograficzną).',
+                explanation: 'Siatka geograficzna składa się z równoleżników (linie poziome pokazujące szerokość geograficzną) i południków (linie pionowe pokazujące długość geograficzną). Dzięki niej możemy precyzyjnie określić położenie każdego punktu na Ziemi.',
             },
             {
                 id: 19,
                 text: 'Który z punktów na mapie świata ma współrzędne 40°S, 20°E?',
-                image: 'src/assets/images/maps/world-map-coordinates-1.svg',
+                image: 'src/assets/images/maps/world-coordinates-question.svg',
+                explanationImage: 'src/assets/images/maps/world-map-coordinates-1.svg',
                 options: [
                     { id: '19a', text: 'Punkt A', correct: false },
                     { id: '19b', text: 'Punkt B', correct: true },
                     { id: '19c', text: 'Żaden z nich', correct: false },
                     { id: '19d', text: 'Oba punkty', correct: false },
                 ],
-                explanation: 'Punkt B znajduje się na przecięciu 40° szerokości południowej (40°S) i 20° długości wschodniej (20°E). Punkt A ma inne współrzędne.',
+                explanation: 'Punkt B znajduje się na przecięciu 40° szerokości południowej (40°S) i 20° długości wschodniej (20°E). Punkt A ma współrzędne 60°N, 100°W.',
             },
             {
                 id: 20,
@@ -266,7 +278,7 @@
                     { id: '20c', text: '66,5°S', correct: true },
                     { id: '20d', text: '90°S', correct: false },
                 ],
-                explanation: 'Koło podbiegunowe południowe znajduje się na szerokości 66,5°S. Jest to odpowiednik koła podbiegunowego północnego, ale na półkuli południowej.',
+                explanation: 'Koło podbiegunowe południowe znajduje się na szerokości 66,5°S. Jest to odpowiednik koła podbiegunowego północnego, ale na półkuli południowej. Wyznacza granicę obszaru antarktycznego.',
             },
             
             // PYTANIA BEZ ILUSTRACJI (20 pytań)
@@ -546,6 +558,11 @@
                     ${isAnswered ? `
                         <div class="mt-8 p-5 bg-blue-50 dark:bg-gray-900 border-l-4 border-blue-500 rounded-r-lg">
                             <h3 class="text-lg font-bold text-blue-800 dark:text-blue-300 mb-2">Wyjaśnienie</h3>
+                            ${question.explanationImage ? `
+                                <div class="my-4 rounded-lg overflow-hidden shadow-lg">
+                                    <img src="${question.explanationImage}" alt="Mapa z odpowiedzią" class="w-full h-auto object-contain max-h-96">
+                                </div>
+                            ` : ''}
                             <p class="text-gray-700 dark:text-gray-300">${question.explanation}</p>
                         </div>
                         <div class="text-center mt-8">

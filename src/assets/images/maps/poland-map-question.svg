@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="700" fill="#d4e8f0"/>
+  
+  <!-- Grid lines for meridians -->
+  <g stroke="#999" stroke-width="1" opacity="0.4">
+    <line x1="150" y1="50" x2="150" y2="650"/>
+    <line x1="250" y1="50" x2="250" y2="650"/>
+    <line x1="350" y1="50" x2="350" y2="650" stroke="#d00" stroke-width="2.5" opacity="0.8"/>
+    <line x1="450" y1="50" x2="450" y2="650"/>
+  </g>
+  
+  <!-- Poland outline -->
+  <path d="M 200,180 
+           L 250,160 L 300,150 L 350,155 L 400,165 L 440,180 
+           L 460,200 L 470,230 L 475,270 L 470,320 
+           L 460,370 L 440,420 L 410,460 L 370,490 
+           L 320,510 L 280,520 L 240,515 L 200,500 
+           L 170,470 L 150,430 L 140,380 L 145,330 
+           L 155,280 L 170,230 Z" 
+        fill="#c8e6c9" stroke="#2d5016" stroke-width="2.5"/>
+  
+  <!-- Baltic Sea -->
+  <ellipse cx="300" cy="130" rx="120" ry="40" fill="#7cb3d9"/>
+  
+  <!-- Cities WITHOUT NAMES - just dots -->
+  <circle cx="350" cy="470" r="6" fill="#333" stroke="#000" stroke-width="1.5"/>
+  <circle cx="405" cy="360" r="5" fill="#333" stroke="#000" stroke-width="1"/>
+  <circle cx="330" cy="300" r="4" fill="#333" stroke="#000" stroke-width="1"/>
+  <circle cx="200" cy="240" r="4" fill="#333" stroke="#000" stroke-width="1"/>
+  
+  <!-- City labels as A, B, C, D -->
+  <text x="350" y="495" font-family="Arial" font-size="18" font-weight="bold" fill="#333" text-anchor="middle">A</text>
+  <text x="405" y="345" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">B</text>
+  <text x="330" y="285" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">C</text>
+  <text x="200" y="225" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">D</text>
+  
+  <!-- Meridian labels -->
+  <g font-family="Arial" font-size="14" fill="#555">
+    <text x="150" y="670" text-anchor="middle">15°E</text>
+    <text x="250" y="670" text-anchor="middle">17°E</text>
+    <text x="350" y="670" text-anchor="middle" fill="#d00" font-weight="bold">19°E</text>
+    <text x="450" y="670" text-anchor="middle">21°E</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="300" y="35" font-family="Arial" font-size="24" font-weight="bold" fill="#333" text-anchor="middle">Które miasto leży przy 19°E?</text>
+</svg>

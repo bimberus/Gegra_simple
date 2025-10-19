@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#f0f8ff"/>
+  
+  <!-- Grid background -->
+  <rect x="100" y="100" width="600" height="400" fill="#fff" stroke="#333" stroke-width="2"/>
+  
+  <!-- Parallels -->
+  <g stroke="#999" stroke-width="1.5">
+    <line x1="100" y1="180" x2="700" y2="180"/>
+    <line x1="100" y1="260" x2="700" y2="260"/>
+    <line x1="100" y1="300" x2="700" y2="300" stroke="#000" stroke-width="2.5"/>
+    <line x1="100" y1="340" x2="700" y2="340"/>
+    <line x1="100" y1="420" x2="700" y2="420"/>
+  </g>
+  
+  <!-- Meridians -->
+  <g stroke="#999" stroke-width="1.5">
+    <line x1="200" y1="100" x2="200" y2="500"/>
+    <line x1="300" y1="100" x2="300" y2="500"/>
+    <line x1="400" y1="100" x2="400" y2="500" stroke="#000" stroke-width="2.5"/>
+    <line x1="500" y1="100" x2="500" y2="500"/>
+    <line x1="600" y1="100" x2="600" y2="500"/>
+  </g>
+  
+  <!-- Latitude labels -->
+  <g font-family="Arial" font-size="14" fill="#555">
+    <text x="80" y="185" text-anchor="end">60°N</text>
+    <text x="80" y="265" text-anchor="end">30°N</text>
+    <text x="80" y="305" text-anchor="end" font-weight="bold" fill="#000">0°</text>
+    <text x="80" y="345" text-anchor="end">30°S</text>
+    <text x="80" y="425" text-anchor="end">60°S</text>
+  </g>
+  
+  <!-- Longitude labels -->
+  <g font-family="Arial" font-size="14" fill="#555">
+    <text x="200" y="530" text-anchor="middle">60°W</text>
+    <text x="300" y="530" text-anchor="middle">30°W</text>
+    <text x="400" y="530" text-anchor="middle" font-weight="bold" fill="#000">0°</text>
+    <text x="500" y="530" text-anchor="middle">30°E</text>
+    <text x="600" y="530" text-anchor="middle">60°E</text>
+  </g>
+  
+  <!-- MYSTERY POINT - NO LABEL -->
+  <circle cx="500" cy="260" r="8" fill="#e74c3c" stroke="#000" stroke-width="2"/>
+  <text x="500" y="245" font-family="Arial" font-size="18" font-weight="bold" fill="#e74c3c" text-anchor="middle">?</text>
+  
+  <!-- Labels -->
+  <text x="750" y="300" font-family="Arial" font-size="16" font-weight="bold" fill="#333" text-anchor="middle" 
+        transform="rotate(-90, 750, 300)">SZEROKOŚĆ GEOGRAFICZNA</text>
+  <text x="400" y="570" font-family="Arial" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">DŁUGOŚĆ GEOGRAFICZNA</text>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="26" font-weight="bold" fill="#333" text-anchor="middle">Odczytaj współrzędne punktu</text>
+</svg>
