@@ -8,11 +8,15 @@ Lekka, responsywna aplikacja quizowa do nauki geografii w czystym HTML/JavaScrip
 
 ## ✨ Funkcjonalności
 
-- 📚 **5 pytań geograficznych** z różnych kategorii
-- 🎨 **Ilustracje SVG** dla wybranych pytań
+- 📚 **40 pytań geograficznych** - szczegółowy trening
+- 🎨 **20 ilustracji SVG** - połowa pytań z grafiką
+- 🗺️ **Siatka kartograficzna** - współrzędne, południki, równoleżniki
+- 🌍 **Ruch obrotowy Ziemi** - dzień i noc, strefy czasowe
+- 📍 **Linie geograficzne** - równik, zwrotniki, koła podbiegunowe
+- ⏰ **Strefy czasowe** - GMT, linia zmiany daty
 - 🎲 **Losowanie pytań** przy każdym uruchomieniu
 - 📊 **Progress bar** z postępem quizu
-- 💡 **Wyjaśnienia** po każdej odpowiedzi
+- 💡 **Szczegółowe wyjaśnienia** po każdej odpowiedzi
 - 🎯 **System punktacji** z podsumowaniem
 - 🔄 **Możliwość ponowienia** testu
 - 🌓 **Tryb ciemny** (dark mode)
@@ -62,10 +66,14 @@ Gegra_simple/
 
 ## 🎓 Kategorie pytań
 
-- 🗺️ **Współrzędne geograficzne** - odczytywanie map
-- 🌍 **Kontynenty** - liczba i położenie
-- ⚖️ **Równik** - podstawowe linie geograficzne
-- 📍 **Lokalizacja miast** - południki i równoleżniki
+- 🗺️ **Współrzędne geograficzne** - odczytywanie i określanie położenia
+- 🌐 **Siatka kartograficzna** - równoleżniki i południki
+- ⏰ **Strefy czasowe** - GMT, różnice czasu między miastami
+- 🌍 **Ruch obrotowy Ziemi** - dzień i noc, kierunek obrotu
+- 📍 **Główne linie geograficzne** - równik, zwrotniki, koła podbiegunowe
+- 🌅 **Konsekwencje ruchu Ziemi** - pory roku, dzień polarny
+- 🗓️ **Linia zmiany daty** - międzynarodowa linia 180°
+- 🌏 **Kontynenty i oceany** - liczba, położenie, charakterystyka
 
 ## 💡 Technologie
 
@@ -78,9 +86,10 @@ Gegra_simple/
 
 | Właściwość | Wartość |
 |------------|---------|
-| Rozmiar HTML | ~12 KB |
-| Liczba pytań | 5 |
-| Ilustracje | 4 mapy SVG |
+| Rozmiar HTML | ~35 KB |
+| Liczba pytań | 40 |
+| Pytania z ilustracjami | 20 (50%) |
+| Ilustracje SVG | 27 plików |
 | Zależności | 0 (tylko Tailwind z CDN) |
 | Build | Nie wymagany |
 | Framework | Brak |
