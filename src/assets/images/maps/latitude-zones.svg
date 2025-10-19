@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="700" fill="#f0f8ff"/>
+  
+  <!-- Globe with zones -->
+  <circle cx="300" cy="350" r="250" fill="#d4e8d4" stroke="#333" stroke-width="2"/>
+  
+  <!-- Zones -->
+  <!-- Arctic -->
+  <ellipse cx="300" cy="350" rx="250" ry="50" fill="#e6f2ff" opacity="0.8"/>
+  <path d="M 50,330 Q 300,280 550,330" fill="#e6f2ff" opacity="0.8"/>
+  
+  <!-- Antarctic -->
+  <ellipse cx="300" cy="350" rx="250" ry="50" transform="translate(0, 220)" fill="#e6f2ff" opacity="0.8"/>
+  <path d="M 50,570 Q 300,620 550,570" fill="#e6f2ff" opacity="0.8"/>
+  
+  <!-- Tropics -->
+  <ellipse cx="300" cy="350" rx="250" ry="60" transform="translate(0, -80)" fill="none" stroke="#d00" stroke-width="2.5"/>
+  <ellipse cx="300" cy="350" rx="250" ry="60" transform="translate(0, 80)" fill="none" stroke="#d00" stroke-width="2.5"/>
+  
+  <!-- Equator -->
+  <ellipse cx="300" cy="350" rx="250" ry="50" fill="none" stroke="#000" stroke-width="3"/>
+  
+  <!-- Latitude lines -->
+  <g stroke="#666" stroke-width="1" opacity="0.5">
+    <ellipse cx="300" cy="350" rx="250" ry="90"/>
+    <ellipse cx="300" cy="350" rx="250" ry="130"/>
+    <ellipse cx="300" cy="350" rx="250" ry="170"/>
+    <ellipse cx="300" cy="350" rx="250" ry="210"/>
+  </g>
+  
+  <!-- Labels -->
+  <text x="30" y="170" font-family="Arial" font-size="16" font-weight="bold" fill="#0066cc">Koło podbiegunowe</text>
+  <text x="30" y="190" font-family="Arial" font-size="16" font-weight="bold" fill="#0066cc">północne (66,5°N)</text>
+  
+  <text x="30" y="270" font-family="Arial" font-size="16" font-weight="bold" fill="#d00">Zwrotnik Raka</text>
+  <text x="30" y="290" font-family="Arial" font-size="16" font-weight="bold" fill="#d00">(23,5°N)</text>
+  
+  <text x="30" y="355" font-family="Arial" font-size="18" font-weight="bold" fill="#000">Równik (0°)</text>
+  
+  <text x="30" y="430" font-family="Arial" font-size="16" font-weight="bold" fill="#d00">Zwrotnik Koziorożca</text>
+  <text x="30" y="450" font-family="Arial" font-size="16" font-weight="bold" fill="#d00">(23,5°S)</text>
+  
+  <text x="30" y="530" font-family="Arial" font-size="16" font-weight="bold" fill="#0066cc">Koło podbiegunowe</text>
+  <text x="30" y="550" font-family="Arial" font-size="16" font-weight="bold" fill="#0066cc">południowe (66,5°S)</text>
+  
+  <!-- Title -->
+  <text x="300" y="40" font-family="Arial" font-size="28" font-weight="bold" fill="#333" text-anchor="middle">Główne linie szerokości geograficznej</text>
+  
+  <!-- Degree markers -->
+  <text x="560" y="170" font-family="Arial" font-size="14" fill="#555">66,5°N</text>
+  <text x="560" y="270" font-family="Arial" font-size="14" fill="#555">23,5°N</text>
+  <text x="560" y="355" font-family="Arial" font-size="14" fill="#555">0°</text>
+  <text x="560" y="430" font-family="Arial" font-size="14" fill="#555">23,5°S</text>
+  <text x="560" y="530" font-family="Arial" font-size="14" fill="#555">66,5°S</text>
+</svg>

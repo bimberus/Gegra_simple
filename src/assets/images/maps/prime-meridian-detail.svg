@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="700" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="600" fill="#e8f4f8"/>
+  
+  <!-- Globe -->
+  <circle cx="350" cy="300" r="220" fill="#d4e8d4" stroke="#333" stroke-width="2"/>
+  
+  <!-- Meridians -->
+  <g stroke="#999" stroke-width="1" opacity="0.4">
+    <ellipse cx="350" cy="300" rx="60" ry="220"/>
+    <ellipse cx="350" cy="300" rx="120" ry="220"/>
+    <ellipse cx="350" cy="300" rx="180" ry="220"/>
+  </g>
+  
+  <!-- Prime Meridian (bold) -->
+  <line x1="350" y1="80" x2="350" y2="520" stroke="#d00" stroke-width="4"/>
+  
+  <!-- Parallels -->
+  <g stroke="#999" stroke-width="1" opacity="0.4">
+    <ellipse cx="350" cy="300" rx="220" ry="60"/>
+    <ellipse cx="350" cy="300" rx="220" ry="120"/>
+    <ellipse cx="350" cy="300" rx="220" ry="180"/>
+  </g>
+  
+  <!-- Europe detail -->
+  <path d="M 320,200 L 350,195 L 380,205 L 390,225 L 385,245 L 360,250 L 335,245 L 325,225 Z" 
+        fill="#8fb98f" stroke="#2d5016" stroke-width="1.5"/>
+  
+  <!-- Greenwich marker -->
+  <circle cx="350" cy="220" r="6" fill="#ff0000" stroke="#000" stroke-width="1.5"/>
+  <text x="380" y="215" font-family="Arial" font-size="14" font-weight="bold" fill="#d00">Greenwich</text>
+  <text x="380" y="232" font-family="Arial" font-size="13" fill="#d00">(Londyn)</text>
+  
+  <!-- Hemisphere labels -->
+  <text x="250" y="300" font-family="Arial" font-size="20" font-weight="bold" fill="#333" text-anchor="middle">Półkula</text>
+  <text x="250" y="325" font-family="Arial" font-size="20" font-weight="bold" fill="#333" text-anchor="middle">Zachodnia</text>
+  <text x="250" y="350" font-family="Arial" font-size="16" fill="#666" text-anchor="middle">(W)</text>
+  
+  <text x="450" y="300" font-family="Arial" font-size="20" font-weight="bold" fill="#333" text-anchor="middle">Półkula</text>
+  <text x="450" y="325" font-family="Arial" font-size="20" font-weight="bold" fill="#333" text-anchor="middle">Wschodnia</text>
+  <text x="450" y="350" font-family="Arial" font-size="16" fill="#666" text-anchor="middle">(E)</text>
+  
+  <!-- Degree markers -->
+  <text x="280" y="560" font-family="Arial" font-size="14" fill="#555">60°W</text>
+  <text x="350" y="560" font-family="Arial" font-size="16" font-weight="bold" fill="#d00" text-anchor="middle">0°</text>
+  <text x="420" y="560" font-family="Arial" font-size="14" fill="#555">60°E</text>
+  
+  <!-- Title -->
+  <text x="350" y="35" font-family="Arial" font-size="26" font-weight="bold" fill="#333" text-anchor="middle">Południk zerowy (Greenwich)</text>
+  <text x="350" y="60" font-family="Arial" font-size="16" fill="#666" text-anchor="middle">Punkt odniesienia dla długości geograficznej</text>
+</svg>

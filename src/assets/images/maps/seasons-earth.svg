@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#001a33"/>
+  
+  <!-- Sun in center -->
+  <circle cx="450" cy="300" r="60" fill="#ffcc00"/>
+  <text x="450" y="310" font-family="Arial" font-size="18" font-weight="bold" fill="#333" text-anchor="middle">SŁOŃCE</text>
+  
+  <!-- Earth positions -->
+  <!-- Summer (top) -->
+  <g transform="translate(450, 120)">
+    <circle r="50" fill="#4a90e2"/>
+    <line x1="0" y1="-70" x2="0" y2="70" stroke="#fff" stroke-width="2"/>
+    <text y="-85" font-family="Arial" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">LATO</text>
+    <text y="-65" font-family="Arial" font-size="13" fill="#ffa500" text-anchor="middle">(półkula płn.)</text>
+  </g>
+  
+  <!-- Winter (bottom) -->
+  <g transform="translate(450, 480)">
+    <circle r="50" fill="#4a90e2"/>
+    <line x1="0" y1="-70" x2="0" y2="70" stroke="#fff" stroke-width="2"/>
+    <text y="100" font-family="Arial" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">ZIMA</text>
+    <text y="120" font-family="Arial" font-size="13" fill="#87ceeb" text-anchor="middle">(półkula płn.)</text>
+  </g>
+  
+  <!-- Orbit -->
+  <ellipse cx="450" cy="300" rx="250" ry="200" fill="none" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial" font-size="26" font-weight="bold" fill="#fff" text-anchor="middle">Pory roku - nachylenie osi Ziemi</text>
+</svg>

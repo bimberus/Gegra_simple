@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="700" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="600" fill="#001a33"/>
+  
+  <!-- Earth -->
+  <circle cx="350" cy="300" r="180" fill="#4a90e2" stroke="#333" stroke-width="2"/>
+  
+  <!-- Continents -->
+  <g opacity="0.6">
+    <path d="M 280,220 L 310,210 L 340,215 L 350,235 L 340,260 L 310,270 L 290,260 Z" fill="#2d5016"/>
+    <path d="M 360,210 L 390,205 L 420,220 L 425,250 L 415,280 L 390,290 L 370,285 Z" fill="#2d5016"/>
+  </g>
+  
+  <!-- Rotation axis -->
+  <line x1="350" y1="100" x2="350" y2="500" stroke="#fff" stroke-width="3" stroke-dasharray="8,4"/>
+  <circle cx="350" cy="100" r="8" fill="#fff"/>
+  <circle cx="350" cy="500" r="8" fill="#fff"/>
+  
+  <text x="380" y="105" font-family="Arial" font-size="14" fill="#fff">Biegun północny</text>
+  <text x="380" y="505" font-family="Arial" font-size="14" fill="#fff">Biegun południowy</text>
+  
+  <!-- Rotation arrows -->
+  <path d="M 520,280 Q 540,240 510,200" stroke="#ffcc00" stroke-width="4" fill="none" marker-end="url(#arrowYellow)"/>
+  <path d="M 180,320 Q 160,360 190,400" stroke="#ffcc00" stroke-width="4" fill="none" marker-end="url(#arrowYellow)"/>
+  
+  <defs>
+    <marker id="arrowYellow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ffcc00"/>
+    </marker>
+  </defs>
+  
+  <!-- Direction label -->
+  <text x="550" y="250" font-family="Arial" font-size="20" font-weight="bold" fill="#ffcc00">→ Zachód</text>
+  <text x="550" y="275" font-family="Arial" font-size="20" font-weight="bold" fill="#ffcc00">na Wschód</text>
+  
+  <!-- Time info -->
+  <rect x="200" y="480" width="300" height="80" fill="#fff" opacity="0.9" stroke="#333" stroke-width="2" rx="10"/>
+  <text x="350" y="510" font-family="Arial" font-size="18" font-weight="bold" fill="#333" text-anchor="middle">Jeden obrót = 24 godziny</text>
+  <text x="350" y="535" font-family="Arial" font-size="15" fill="#666" text-anchor="middle">Ziemia obraca się wokół własnej osi</text>
+  
+  <!-- Title -->
+  <text x="350" y="40" font-family="Arial" font-size="28" font-weight="bold" fill="#fff" text-anchor="middle">Ruch obrotowy Ziemi</text>
+</svg>
